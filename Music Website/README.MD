@@ -2,7 +2,7 @@
 
 A simple and responsive *Music Website* built using *HTML* and *CSS*. It features a modern user interface for showcasing music, playlists, albums, and artists.
 
-## 📸 Project Screenshot
+## 📸 Project Images
 
 ![Music Website](music images)
 
