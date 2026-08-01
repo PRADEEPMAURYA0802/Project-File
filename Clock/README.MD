@@ -2,7 +2,7 @@
 
 A simple and responsive Analog Clock built using HTML, CSS, and JavaScript. It displays the current time in real-time with a clean glassmorphism design.
 
-## 📸 Project Screenshot
+## 📸 Project Images
 
 ![Clock](clock image.jpg)
 
