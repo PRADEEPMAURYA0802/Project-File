@@ -3,7 +3,7 @@
 A simple and responsive Calculator built using HTML, CSS, and JavaScript. 
 It performs basic arithmetic operations with a clean and modern user interface.
 
-## 📸 Project Screenshot
+## 📸 Project Images
 
 ![Calculator Screenshot](calculator image.jpg)
 
