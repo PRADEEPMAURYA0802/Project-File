@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  background-image: url("calculator\ image.jpg");
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+  align-items: center;
+ 
+} 
+/*#22252d*/
+
+.calculator {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  background: transparent;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.calculator input {
+  width: 100%;
+  height: 80px;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  background: white;
+  color: black;
+  font-size: 35px;
+  text-align: right;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.calculator .row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.calculator button {
+  width: 70px;
+  height: 70px;
+  border: none;
+  border-radius: 50%;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  background:white;
+  color: black;
+  transition: 0.3s;
+}
+
+.calculator button:hover {
+  background: #4b5363;
+  transform: scale(1.05);
+}
+
+.calculator button:active {
+  transform: scale(0.95);
+}
+
+
+.calculator button.operator {
+  background: aqua;
+  color: black;
+}
+
+.calculator button.operator:hover {
+  background: aqua;
+}
+
+.calculator button.equal {
+  background: purple;
+  color: black;
+}
+
+.calculator button.equal:hover {
+  background: orangered;
+}
+
+.calculator button.clear {
+  background: aqua;
+  color: black;
+}
+
+.calculator button.clear:hover {
+  background: red;
+}
