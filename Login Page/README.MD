@@ -3,7 +3,7 @@
 A simple and responsive *Login Page* built using *HTML* and *CSS*.
 It features a clean, modern, and user-friendly interface suitable for authentication pages.
 
-## 📸 Project Screenshot
+## 📸 Project Images
 
 ![Login Page](table.jpg)
 
