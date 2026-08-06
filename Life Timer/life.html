@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Timer</title>
+
+    <link rel="stylesheet" href="life.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+<body>
+  <div class="background">
+      <div id="initialText" class="container">
+        <h1>Kindly Enter Your Date Of Birth</h1>
+      </div>
+      <div id="afterDOBBtnTxt" class="container hide">
+       <div class="center">
+         <h1>How Much Life Journey Covered, Till Now</h1>
+       <div class="time-container">
+
+        <div class="time-box">
+           <div id="year" class="value">00</div>
+           <span>Years</span>
+        </div>
+
+        <div class="time-box">
+           <div id="month" class="value">00</div>
+            <span>Months</span>
+        </div>
+
+        <div class="time-box">
+            <div id="day" class="value">00</div>
+            <span>Days</span>
+        </div>
+
+      <div class="time-box">
+          <div id="hour" class="value">00</div>
+           <span>Hours</span>
+      </div>
+
+      <div class="time-box">
+          <div id="minute" class="value">00</div>
+          <span>Minutes</span>
+      </div>
+
+      <div class="time-box">
+          <div id="second" class="value">00</div>
+          <span>Seconds</span>
+      </div>
+
+       </div>
+     </div>
+   </div>
+
+    <div class="settings">
+        <i id="settingIcon" class="fa-solid fa-gear"></i>
+        <div id="settingContent" class="settings-content hide">
+                <input type="date" id="dobInput">
+                <button id="dobButton">Add DOB</button>
+            </div>
+        </div>
+  </div>
+
+    <script src="life.js"></script>
+
+</body>
+</html>

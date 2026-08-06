@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Oswald",sans-serif;
+}
+
+body{
+    overflow:hidden;
+}
+
+.background{
+    width:100%;
+    height:100vh;
+    background:url("./images/mountain.jpg") no-repeat center center/cover;
+    position:relative;
+}
+
+.container{
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.center{
+    text-align:center;
+}
+
+#initialText h1,
+.center h1{
+    color:#fff;
+    font-size:3.5rem;
+    text-shadow:3px 3px 10px rgba(0,0,0,0.7);
+}
+
+.time-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:35px;
+    margin-top:40px;
+    flex-wrap:wrap;
+}
+
+.time-box{
+    width:120px;
+    text-align:center;
+}
+
+.value{
+    font-size:4rem;
+    font-weight:bold;
+    color:#fff;
+    margin-bottom:10px;
+}
+
+.time-box span{
+    display:block;
+    color:#fff;
+    font-size:1.5rem;
+    font-weight:500;
+}
+
+.settings{
+    position:absolute;
+    right:30px;
+    bottom:30px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+#settingIcon{
+    color:#fff;
+    font-size:40px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+#settingIcon:hover{
+    transform:rotate(90deg);
+}
+
+.settings-content{
+    display:flex;
+    gap:10px;
+    align-items:center;
+}
+
+.settings-content input{
+    padding:10px 15px;
+    border:none;
+    outline:none;
+    border-radius:6px;
+    font-size:16px;
+}
+
+.settings-content button{
+    padding:10px 20px;
+    border:none;
+    border-radius:6px;
+    background:green;
+    color:#fff;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.settings-content button:hover{
+    background:#0b8d0b;
+}
+
+.hide{
+    display:none;
+}
+
+@media(max-width:768px){
+
+    #initialText h1,
+    .center h1{
+        font-size:2rem;
+        padding:0 15px;
+    }
+
+    .time-container{
+        gap:20px;
+    }
+
+    .time-box{
+        width:90px;
+    }
+
+    .value{
+        font-size:2.5rem;
+    }
+
+    .time-box span{
+        font-size:1rem;
+    }
+
+    .settings{
+        right:15px;
+        bottom:15px;
+        flex-direction:column;
+        align-items:flex-end;
+    }
+
+    .settings-content{
+        flex-direction:column;
+    }
+}
