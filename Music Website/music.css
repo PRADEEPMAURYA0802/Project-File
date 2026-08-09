@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
 :root {
   --purple500: #281154;
   --purple300: #270082;
@@ -7,33 +8,50 @@
   --body: #f9f6ff;
   --max-width: 1200px;
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-html,
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  line-height: 1.4;
-  scroll-behavior: smooth;
+  line-height: 1.5;
+  overflow-x: hidden;
 }
 
 section {
-  scroll-margin: 50px;
+  scroll-margin-top: 80px;
 }
+
 ul {
   list-style: none;
 }
+
 a {
   text-decoration: none;
   color: white;
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 .container {
-  max-width: 1200px;
+  width: 90%;
+  max-width: var(--max-width);
   margin: 0 auto;
 }
+
 header {
   background-color: var(--purple300);
   position: sticky;
@@ -41,155 +59,542 @@ header {
   z-index: 100;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
+
 nav {
+  min-height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: white;
-  padding: 20px 0;
+  padding: 15px 0;
 }
+
 .logo {
-  font-size: 32px;
+  font-size: 3.2rem;
   font-weight: 600;
 }
 
-button {
-  padding: 10px 15px;
-  border: none;
-  transition: 0.2s ease-in-out;
-}
-button:hover {
-  transition: 0.2s ease-in-out;
-  opacity: 0.8;
-}
 nav ul {
   display: flex;
-  gap: 20px;
+  align-items: center;
+  gap: 2rem;
 }
 
 nav ul li {
+  font-size: 1.7rem;
   border-bottom: 2px solid transparent;
+  padding-bottom: 4px;
   transition: 0.2s ease-in;
 }
+
 nav ul li:hover {
   border-bottom: 2px solid white;
-  transition: 0.2s ease-in;
-}
-.hero-section {
- background-image: url("music images/hero_image.png");
-  height: 100vh;
-  display: grid;
-  color: white;
-  place-items: center;
-  text-align: center;
 }
 
-.hero-section .container {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-.hero-section h1 {
-  font-size: 96px;
-}
-.hero-section h3 {
-  font-size: 32px;
+button {
+  padding: 1rem 1.5rem;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
 }
 
-.music-section {
-  padding-top: 50px;
-  background: var(--purple500);
-}
-.music-section .container {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  justify-content: center;
-  align-items: center;
-  color: white;
+button:hover {
+  opacity: 0.8;
 }
 
-.ipad-iphone-img {
-  margin-top: -400px;
-  position: relative;
-  top: 400px;
-}
 .primary-btn {
   background-color: var(--red600);
   color: white;
 }
+
 .secondary-btn {
   background-color: var(--purple300);
   color: white;
 }
 
-.about-music {
-  padding-top: 500px;
+.hero-section {
+  min-height: calc(100vh - 70px);
+  background-image: url("music images/hero_image.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
   display: grid;
   place-items: center;
-  gap: 50px;
+
+  color: white;
   text-align: center;
-  margin-bottom: 50px;
+  padding: 6rem 0;
+}
+
+.hero-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.hero-section h1 {
+  font-size: clamp(4.5rem, 8vw, 9.6rem);
+  line-height: 1.1;
+}
+
+.hero-section h3 {
+  font-size: clamp(2rem, 3vw, 3.2rem);
+}
+
+.hero-section p {
+  max-width: 900px;
+  font-size: 1.8rem;
+  line-height: 1.7;
+}
+
+.music-section {
+  padding: 8rem 0;
+  background: var(--purple500);
+}
+
+.music-section .container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.music-section h2 {
+  font-size: 5rem;
+}
+
+.music-section h4 {
+  max-width: 900px;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.music-section p {
+  font-size: 1.6rem;
+}
+
+.ipad-iphone-img {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 3rem;
+}
+
+.ipad-iphone-img img {
+  width: 100%;
+}
+
+.about-music {
+  padding: 8rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  text-align: center;
+}
+
+.about-music h3 {
+  font-size: 3.2rem;
+}
+
+.about-music p {
+  max-width: 900px;
+  font-size: 1.8rem;
+  line-height: 1.7;
+}
+
+.about-music .secondary-btn {
+  align-self: center;
+}
+
+.mac-img {
+  width: 100%;
+  max-width: 900px;
+  margin-top: 2rem;
+}
+
+.mac-img img {
+  width: 100%;
 }
 
 .video-section {
+  min-height: 700px;
+
   background-image: url("music images/video.png");
-  min-height: 800px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: grid;
   place-items: center;
   color: white;
   text-align: center;
+  padding: 8rem 0;
 }
+
 .video-section .container {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  margin-top: -200px;
+  align-items: center;
+  gap: 3rem;
 }
-.hero-section,
-.video-section {
-  position: relative;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+
+.video-section h2 {
+  font-size: clamp(3.5rem, 5vw, 6rem);
+}
+
+.video-section p {
+  max-width: 900px;
+  font-size: 1.8rem;
+  line-height: 1.7;
 }
 
 .gift-section {
   display: flex;
   justify-content: center;
-  margin: 100px 0;
-  gap: 50px;
+  align-items: center;
+  gap: 6rem;
+  padding: 8rem 0;
+}
+
+.gift-card {
+  flex: 1;
+}
+
+.gift-card img {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .gift-content {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 2rem;
+}
+
+.gift-content h3 {
+  font-size: 3.5rem;
+}
+
+.gift-content p {
+  font-size: 1.7rem;
+  line-height: 1.7;
+}
+
+.gift-content hr {
+  border: none;
+  border-top: 1px solid #ccc;
 }
 
 .footer-upper {
   background-color: var(--purple600);
-  padding: 20px;
-}
-.footer-upper .container {
-  display: flex;
+  padding: 5rem 0;
   color: white;
-  justify-content: space-between;
 }
 
-.footer-upper h4 {
-  padding-bottom: 10px;
-  border-bottom: 2px solid white;
-  margin-bottom: 10px;
+.footer-upper .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
 }
+
+.footer-links h4 {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid white;
+  margin-bottom: 1.5rem;
+}
+
+.footer-links ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.footer-links li {
+  font-size: 1.5rem;
+}
+
 .footer-lower {
   background-color: var(--purple300);
-  padding: 20px;
+  padding: 2rem;
   display: flex;
   justify-content: center;
   color: white;
+  text-align: center;
 }
 
-.gift-section {
-  scroll-margin: 120px;
+.footer-lower p {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+
+  .container {
+    width: 92%;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .logo {
+    font-size: 2.8rem;
+  }
+
+  .hero-section {
+    min-height: 80vh;
+  }
+
+  .hero-section h1 {
+    font-size: 6rem;
+  }
+
+  .hero-section h3 {
+    font-size: 2.4rem;
+  }
+
+  .hero-section p {
+    font-size: 1.7rem;
+  }
+
+  .music-section {
+    padding: 6rem 0;
+  }
+
+  .ipad-iphone-img {
+    max-width: 600px;
+  }
+
+  .about-music {
+    padding: 6rem 0;
+  }
+
+  .mac-img {
+    max-width: 700px;
+  }
+
+  .video-section {
+    min-height: 600px;
+  }
+
+  .gift-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 4rem;
+  }
+
+  .gift-card,
+  .gift-content {
+    width: 100%;
+  }
+
+  .gift-card img {
+    max-width: 500px;
+  }
+
+  .gift-content {
+    align-items: center;
+  }
+
+  .footer-upper .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 50%;
+  }
+
+  .container {
+    width: 92%;
+  }
+
+  nav {
+    padding: 1.5rem 0;
+  }
+
+  .logo {
+    font-size: 2.5rem;
+  }
+
+  nav ul {
+    width: 100%;
+    gap: 1rem;
+  }
+
+  nav ul li {
+    font-size: 1.4rem;
+  }
+
+  .hero-section {
+    min-height: 75vh;
+    padding: 5rem 0;
+  }
+
+  .hero-section .container {
+    gap: 2rem;
+  }
+
+  .hero-section h1 {
+    font-size: 4.5rem;
+  }
+
+  .hero-section h3 {
+    font-size: 1.9rem;
+  }
+
+  .hero-section p {
+    font-size: 1.5rem;
+  }
+
+  .music-section {
+    padding: 5rem 0;
+  }
+
+  .music-section h2 {
+    font-size: 4rem;
+  }
+
+  .music-section h4 {
+    font-size: 1.5rem;
+  }
+
+  .music-section p {
+    font-size: 1.4rem;
+  }
+
+  .ipad-iphone-img {
+    max-width: 350px;
+    margin-top: 2rem;
+  }
+
+  .about-music {
+    padding: 5rem 0;
+    gap: 2.5rem;
+  }
+
+  .about-music h3 {
+    font-size: 2.5rem;
+  }
+
+  .about-music p {
+    font-size: 1.5rem;
+  }
+
+  .mac-img {
+    max-width: 350px;
+  }
+
+  .video-section {
+    min-height: 500px;
+    padding: 5rem 0;
+  }
+
+  .video-section h2 {
+    font-size: 3.5rem;
+  }
+
+  .video-section p {
+    font-size: 1.5rem;
+  }
+
+  .gift-section {
+    padding: 5rem 0;
+    gap: 3rem;
+  }
+
+  .gift-card img {
+    max-width: 300px;
+  }
+
+  .gift-content h3 {
+    font-size: 2.8rem;
+  }
+
+  .gift-content p {
+    font-size: 1.5rem;
+  }
+
+  .footer-upper {
+    padding: 4rem 0;
+  }
+
+  .footer-upper .container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .footer-links h4 {
+    font-size: 1.8rem;
+  }
+
+  .footer-links li {
+    font-size: 1.4rem;
+  }
+
+  .footer-lower p {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 360px) {
+  html {
+    font-size: 45%;
+  }
+
+  .logo {
+    font-size: 2.2rem;
+  }
+
+  nav ul {
+    gap: 0.7rem;
+  }
+
+  nav ul li {
+    font-size: 1.2rem;
+  }
+
+  .hero-section {
+    min-height: 70vh;
+  }
+
+  .hero-section h1 {
+    font-size: 3.8rem;
+  }
+
+  .hero-section h3 {
+    font-size: 1.7rem;
+  }
+
+  .ipad-iphone-img {
+    max-width: 300px;
+  }
+
+  .mac-img {
+    max-width: 300px;
+  }
+
+  .gift-card img {
+    max-width: 260px;
+  }
 }
